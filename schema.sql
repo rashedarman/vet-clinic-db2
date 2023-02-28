@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS animals (
     date_of_birth DATE,
     escape_attempts INT,
     neutered BOOLEAN,
-    weight_kg FLOAT
+    weight_kg FLOAT,
+    species VARCHAR(100),
 );
-
-ALTER TABLE animals ADD COLUMN species VARCHAR(100);
