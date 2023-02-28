@@ -56,3 +56,17 @@ COMMIT;
 
 -- Verify that change was made and persists after commit.
 SELECT * FROM animals;
+
+-- Create queries to answer the questions:
+--    How many animals are there?
+--    How many animals have never tried to escape?
+--    What is the average weight of animals?
+--    Who escapes the most, neutered or not neutered animals?
+--    What is the minimum and maximum weight of each type of animal?
+--    What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT neutered FROM animals GROUP BY neutered ORDER BY SUM(escape_attempts) DESC LIMIT 1;
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
