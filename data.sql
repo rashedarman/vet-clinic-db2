@@ -25,3 +25,31 @@ INSERT INTO species (id, name) VALUES (1, 'Pokemon'), (2, 'Digimon');
 UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
 -- All other animals are Pokemon
 UPDATE animals SET species_id = 1 WHERE species_id IS NULL;
+
+
+-- Modify inserted animals to include owner information (owner_id): 
+  -- Sam Smith owns Agumon.
+  -- Jennifer Orwell owns Gabumon and Pikachu.
+  -- Bob owns Devimon and Plantmon.
+  -- Melody Pond owns Charmander, Squirtle, and Blossom.
+  -- Dean Winchester owns Angemon and Boarmon.
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith')
+WHERE name = 'Agumon';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Jennifer Orwell')
+WHERE name = 'Gabumon' OR name = 'Pikachu';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Bob')
+WHERE name = 'Devimon' OR name = 'Plantmon';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
+WHERE name = 'Angemon'  OR name = 'Boarmon';
