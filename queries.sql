@@ -76,13 +76,13 @@ SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1
 --    List all Digimon owned by Jennifer Orwell.
 --    List all animals owned by Dean Winchester that haven't tried to escape.
 --    Who owns the most animals?
-SELECT id, name FROM animals 
-JOIN owners ON animals.owner_id = owners.id 
+SELECT animals.name AS animal_name, owners.full_name AS owner_name 
+FROM animals JOIN owners ON animals.owner_id = owners.id 
 WHERE full_name = 'Melody Pond';
 
 SELECT * FROM animals
 JOIN species ON animals.species_id = species.id
-WHERE species.name = 'pokemon';
+WHERE species.name = 'Pokemon';
 
 SELECT animals.name AS animal_name, owners.fulL_name AS owner_name 
 FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
@@ -94,7 +94,7 @@ GROUP BY species.name;
 SELECT animals.name AS animal_name, owners.full_name AS owner_name FROM animals
 JOIN owners ON animals.owner_id = owners.id
 JOIN species ON animals.species_id = species.id
-WHERE species.name = 'digimon' AND owners.full_name = 'Jennifer Orwell';
+WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
 
 SELECT animals.name AS animal_name, owners.full_name AS owner_name FROM animals
 JOIN owners ON animals.owner_id = owners.id
