@@ -31,4 +31,6 @@ CREATE TABLE IF NOT EXISTS species (
 --    Add column species_id which is a foreign key referencing species table
 --    Add column owner_id which is a foreign key referencing the owners table
 ALTER TABLE animals ADD PRIMARY KEY (id);
-ALTER TABLE animals DROP COLUMN species, ADD COLUMN species_id INT, ADD COLUMN owner_id INT;
+ALTER TABLE REMOVE species;
+ALTER TABLE animals ADD species_id INT REFERENCES species(id);
+ALTER TABLE animals ADD owner_id INT REFERENCES owners(id);
