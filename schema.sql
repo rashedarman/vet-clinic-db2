@@ -8,3 +8,6 @@ CREATE TABLE IF NOT EXISTS animals (
     neutered BOOLEAN,
     weight_kg FLOAT
 );
+
+-- Add a new column species to the animals table
+ALTER TABLE animals ADD COLUMN species VARCHAR(100);
