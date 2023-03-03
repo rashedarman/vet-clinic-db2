@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS specializations (
 );
 
 -- Intermediary table to hold m-n relationship between animals and vets
-CREATE TABLE visits (
+CREATE TABLE IF NOT EXISTS visits (
 	animals_id INT NOT NULL REFERENCES animals (id),
 	vets_id INT NOT NULL REFERENCES vets (id),
 	date_of_visit DATE NOT NULL
