@@ -57,3 +57,6 @@ CREATE TABLE IF NOT EXISTS visits (
 	vets_id INT NOT NULL REFERENCES vets (id),
 	date_of_visit DATE NOT NULL
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
