@@ -1,5 +1,7 @@
 # Vet Clinic Database
 
+![Diagram](./diagram.png)
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
@@ -17,10 +19,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [📝 License](#license)
@@ -36,6 +40,13 @@ Real-life example of a database for a vet clinic.
 ### Tech Stack <a name="tech-stack"></a>
 
 - [PostgreSQL](https://www.postgresql.org/)
+
+### Key Features <a name="key-features"></a>
+
+- **[Data management using Postgre SQL tables]**
+- **[Table relationships one to many and many to many]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -66,6 +77,19 @@ Clone this repository to your desired folder:
 - GitHub: [@rashedarman](https://github.com/rashedarman)
 - Twitter: [@rashedarman21](https://twitter.com/rashedarman21)
 - LinkedIn: [@rashedarman](https://linkedin.com/in/rashedarman)
+
+👤 **Author2**
+
+- GitHub: [@simplegoose](https://github.com/simplegoose)
+- LinkedIn: [@Timothy Njoroge](https://linkedin.com/in/timothy-njoroge-mwangi)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [Client] **[Creating an interactive client for the database]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
